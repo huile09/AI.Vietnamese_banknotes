@@ -7,7 +7,7 @@ Dự án này sử dụng mạng nơ-ron tích chập (CNN) được xây dựng
 
 Do giới hạn dung lượng file trên GitHub, file trọng số mô hình `.h5` được lưu trữ tại Google Drive. Bạn có thể tải về để sử dụng ngay mà không cần huấn luyện lại:
 
-👉 [**Tải file mo_hinh_nhan_dien_tien_50_epochs2.h5 tại đây**](https://drive.google.com/file/d/148glXrFQ_64CmSMdZCvfsmUkDTkMOCmd/view?usp=drive_link)
+👉 [**Tải file mo_hinh_nhan_dien_tien_50_epochs2.h5 tại đây**](https://drive.google.com/file/d/1t9eL14Qoz3lDkMTycntEU6tC-pBlIaFX/view?usp=sharing)
 
 ---
 
