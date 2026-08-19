@@ -1,34 +1,33 @@
-# Hệ Thống Nhận Diện Mệnh Giá Tiền Việt Nam (Banknote Recognition)
+# Vietnamese Banknote Recognition (CNN)
 
-Dự án này sử dụng mạng nơ-ron tích chập (CNN) được xây dựng từ đầu (scratch) để phân loại 11 mệnh giá tiền tệ đang lưu hành tại Việt Nam. Mô hình được tối ưu hóa để nhận diện chính xác các đặc trưng về màu sắc và hoa văn trên các tờ tiền Polymer và tiền giấy.
-
-
-## Tải Xuống Mô Hình Pre-trained
-
-Do giới hạn dung lượng file trên GitHub, file trọng số mô hình `.h5` được lưu trữ tại Google Drive. Bạn có thể tải về để sử dụng ngay mà không cần huấn luyện lại:
-
-👉 [**Tải file mo_hinh_nhan_dien_tien_50_epochs2.h5 tại đây**](https://drive.google.com/file/d/1t9eL14Qoz3lDkMTycntEU6tC-pBlIaFX/view?usp=sharing)
+This project uses a custom **Convolutional Neural Network (CNN)** built from scratch using `Keras` and `TensorFlow` to classify 11 circulating denominations of Vietnamese currency.
 
 ---
 
-## 📂 Cấu Trúc Thư Mục Dự Án
+## Project Overview
 
-*   `AI_Banknotes.ipynb`: File Google Colab chứa toàn bộ mã nguồn từ xử lý dữ liệu đến huấn luyện.
-*   `test_file/`: Thư mục chứa các hình ảnh mệnh giá tiền thực tế dùng để kiểm thử (Test).
-*   `README.md`: Hướng dẫn và thông tin dự án.
+* **Objective:** Automatically recognize and classify 11 Vietnamese banknote denominations (both polymer and paper notes).
+* **Model:** Custom CNN model optimized to extract color patterns and visual features of banknotes.
+* **Training:** Trained over 50 epochs using data augmentation techniques.
 
 ---
 
-## 🛠️ Cách Chạy Mô Hình
+## Pre-trained Model
 
-Bạn có thể nạp lại mô hình trong môi trường Python/Colab bằng lệnh sau:
+Due to GitHub's file size limits for model weight files (`.h5`), the trained model is hosted on Google Drive:
+
+* **Banknote Recognition Model:** 👉 [Download `mo_hinh_nhan_dien_tien_50_epochs2.h5`](https://drive.google.com/file/d/1t9eL14Qoz3lDkMTycntEU6tC-pBlIaFX/view?usp=sharing)
+
+---
+
+## How to Use
+
+Download the `.h5` model file and load it using `tensorflow.keras`:
 
 ```python
 from tensorflow.keras.models import load_model
 
-# Load model từ file đã tải về
+# Load the pre-trained model
 model = load_model('mo_hinh_nhan_dien_tien_50_epochs2.h5')
 
-# Dự đoán ảnh mới
-# predictions = model.predict(img_prepared)
-print("✅ Mô hình Banknote đã sẵn sàng!")
+print("Banknote recognition model ready for inference!")
